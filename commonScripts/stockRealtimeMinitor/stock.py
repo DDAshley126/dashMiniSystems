@@ -53,7 +53,25 @@ def data_process(result):
     return data
 
 
+def send_notice():  # 发送通知至桌面函数，按需使用
+    title = "提醒"    # 设置通知的内容
+    message = "这是一个来自Python的桌面通知！"
+
+    # 发送通知
+    notification.notify(
+        title=title,
+        message=message,
+        app_name="my app",  # 应用名称，会显示在通知中
+        timeout=10,  # 通知持续时间（秒），0表示直到用户手动关闭
+        ticker="预警",  # 在某些系统上，这是状态栏的短暂文本提示
+    )
+
+    # 等待一段时间，以便能看到通知（可选）
+    time.sleep(60)
+
+
 if __name__ == '__main__':
     result = get_stock_data()
     result = data_process(result)
     result.to_excel('stock_data.xlsx')
+    send_notice()
