@@ -46,3 +46,14 @@ def get_stock_data():
             break
     return result
     
+
+def data_process(result):
+    data = pd.DataFrame(result)
+    data['更新时间'] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
+    return data
+
+
+if __name__ == '__main__':
+    result = get_stock_data()
+    result = data_process(result)
+    result.to_excel('stock_data.xlsx')
