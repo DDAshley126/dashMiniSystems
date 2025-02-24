@@ -1,4 +1,4 @@
-# dashStockAnalysis
+# dashMiniSystems
 
 #### 介绍
 本仓库收集各式各样的dash应用，仓库内应用均基于[dash框架](https://blog.csdn.net/dududdu666666/article/details/142142486)和开源组件库[feffery_antd_components](https://fac.feffery.tech/)开发。
