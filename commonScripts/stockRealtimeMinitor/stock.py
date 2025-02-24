@@ -1,3 +1,6 @@
+__author__ = 'Ashley'
+__email__ ='ddclare126@163.com'
+
 import requests
 import re
 import time
